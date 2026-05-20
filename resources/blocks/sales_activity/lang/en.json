@@ -1,0 +1,16 @@
+{
+    "name": "Sales activity",
+    "default_title_store": "Recent sales (store-wide)",
+    "default_title_category": "Sales in this category",
+    "default_title_product": "Sales for this product",
+    "default_title": "Sales activity",
+    "badge_product_html": "In the last %1$s hours, %2$s units were purchased",
+    "badge_orders_html": "In the last %1$s hours, %2$s line items were ordered",
+    "ticker_store_bought_html": "%1$s · %2$s purchased",
+    "ticker_product_only": "%1$s — Purchases of this product",
+    "card_subtitle": "Units sold in the last %1$s hours (order line items)",
+    "unit_piece": "units",
+    "card_line_quantity": "%1$s · %2$s units",
+    "recent_products_heading": "Recently sold",
+    "recent_products_more": "%1$s and more"
+}

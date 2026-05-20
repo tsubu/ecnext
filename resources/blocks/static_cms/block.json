@@ -1,0 +1,9 @@
+{
+    "name": "フリーテキスト\/HTML",
+    "category": "General",
+    "schema": {
+        "content": "text"
+    },
+    "icon": "document-text",
+    "version": "1.0.0"
+}

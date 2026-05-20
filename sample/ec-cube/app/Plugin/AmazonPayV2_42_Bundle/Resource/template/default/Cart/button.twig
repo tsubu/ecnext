@@ -1,0 +1,30 @@
+{#
+Amazon Pay V2 for EC-CUBE4.2
+Copyright(c) 2023 EC-CUBE CO.,LTD. all rights reserved.
+
+https://www.ec-cube.co.jp/
+
+This program is not free software.
+It applies to terms of service.
+#}
+
+<style>
+    .AmazonPayButton {
+        margin-top: 10px;
+    }
+</style>
+{% for CartIndex,Cart in Carts %}
+    {% set cartKey = Cart.cart_key %}
+    {% set SaleType = Cart.CartItems[0].ProductClass.SaleType.id %}
+    {% if SaleType in AmazonSaleTypes %}
+        <div style="width: 210px;">
+            <p style="height: 70px;" id="AmazonPayButton{{ cartKey }}" class="AmazonPayButton"></p>
+        </div>
+        <script>
+            $(function () {
+                // ボタンを設置
+                $('#form_cart > div.ec-cartRole__actions').eq("{{ loop.index0 }}").append($("#AmazonPayButton{{ cartKey }}"));
+            });
+        </script>
+    {% endif %}
+{% endfor %}

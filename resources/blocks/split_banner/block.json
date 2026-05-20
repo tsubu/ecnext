@@ -1,0 +1,14 @@
+{
+    "name": "スプリットバナー",
+    "category": "Marketing",
+    "schema": {
+        "headline": "string",
+        "description": "text",
+        "image_url": "image",
+        "button_text": "string",
+        "button_url": "string",
+        "alignment": "string"
+    },
+    "icon": "duplicate",
+    "version": "1.0.0"
+}

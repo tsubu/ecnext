@@ -1,0 +1,7 @@
+{
+    "name": "クーポンバナー",
+    "default_title": "スペシャルクーポン",
+    "default_description": "お得なクーポンをご利用ください",
+    "copied": "コピーしました！",
+    "expires_prefix": "有効期限:"
+}

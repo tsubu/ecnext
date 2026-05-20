@@ -1,0 +1,7 @@
+{
+    "name": "Coupon banner",
+    "default_title": "Special coupon",
+    "default_description": "Use this coupon for extra savings.",
+    "copied": "Copied!",
+    "expires_prefix": "Valid until:"
+}

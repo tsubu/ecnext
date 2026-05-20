@@ -1,0 +1,9 @@
+{
+    "name": "カスタムCSS",
+    "category": "General",
+    "schema": {
+        "css_code": "text"
+    },
+    "icon": "code",
+    "version": "1.0.0"
+}

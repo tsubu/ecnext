@@ -1,0 +1,10 @@
+{
+    "name": "ニュースレター登録",
+    "category": "Social",
+    "schema": {
+        "title": "string",
+        "placeholder": "string"
+    },
+    "icon": "mail",
+    "version": "1.0.0"
+}

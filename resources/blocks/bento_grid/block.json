@@ -1,0 +1,17 @@
+{
+    "name": "ベントーグリッド",
+    "category": "Marketing",
+    "schema": {
+        "title": "string",
+        "subtitle": "string",
+        "item_1_title": "string",
+        "item_1_text": "text",
+        "item_1_image": "image",
+        "item_2_title": "string",
+        "item_2_text": "text",
+        "item_3_title": "string",
+        "item_4_title": "string"
+    },
+    "icon": "view-grid",
+    "version": "1.0.0"
+}

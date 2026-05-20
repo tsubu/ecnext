@@ -1,0 +1,7 @@
+{
+    "name": "ニュースレター登録",
+    "default_title": "最新情報を受け取る",
+    "default_lead": "会員限定のお知らせやセール情報をメールでお届けします。",
+    "default_placeholder": "メールアドレスを入力",
+    "subscribe": "登録する"
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Newsletter signup",
+    "default_title": "Join the inner circle",
+    "default_lead": "Get exclusive updates, trend reports, and early access to curated drops.",
+    "default_placeholder": "you@example.com",
+    "subscribe": "Subscribe"
+}

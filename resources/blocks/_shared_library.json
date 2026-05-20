@@ -1,0 +1,750 @@
+{
+    "hero_canvas": [
+        {
+            "name": "グランドオープン",
+            "settings": {
+                "headline": "GRAND\nOPENING",
+                "lead_text": "新しいショッピング体験が、今はじまる。",
+                "bg_image": "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?auto=format&fit=crop&q=80&w=2000",
+                "cta_primary_label": "今すぐ探す",
+                "cta_primary_link": "/products",
+                "overlay_opacity": 0.5
+            },
+            "name_locales": {
+                "ja": "グランドオープン",
+                "en": "Grand opening"
+            }
+        },
+        {
+            "name": "シーズナルセール",
+            "settings": {
+                "headline": "SUMMER\nCOLLECTION",
+                "lead_text": "最大50%OFF。この夏のスタイルをアップデート。",
+                "bg_image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=2000",
+                "cta_primary_label": "セール会場へ",
+                "cta_primary_link": "/sale",
+                "overlay_opacity": 0.6
+            },
+            "name_locales": {
+                "ja": "シーズナルセール",
+                "en": "Seasonal sale"
+            }
+        },
+        {
+            "name": "ミニマル",
+            "settings": {
+                "headline": "LESS IS\nMORE",
+                "lead_text": "シンプルで洗練されたライフスタイルを。",
+                "bg_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
+                "cta_primary_label": "コレクション",
+                "cta_primary_link": "/collections",
+                "overlay_opacity": 0.4
+            },
+            "name_locales": {
+                "ja": "ミニマル",
+                "en": "Minimal"
+            }
+        }
+    ],
+    "split_banner": [
+        {
+            "name": "季節キャンペーン",
+            "settings": {
+                "headline": "春の新生活応援セール",
+                "description": "新生活に必要なアイテムを特別価格でご用意。",
+                "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=1200",
+                "button_text": "セール会場へ",
+                "button_url": "/sale",
+                "alignment": "left"
+            },
+            "name_locales": {
+                "ja": "季節キャンペーン",
+                "en": "Seasonal campaign"
+            }
+        },
+        {
+            "name": "会員登録促進",
+            "settings": {
+                "headline": "会員限定特典",
+                "description": "今すぐ無料会員登録で、初回購入10%OFFクーポンをプレゼント。",
+                "image_url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+                "button_text": "無料で登録する",
+                "button_url": "/register",
+                "alignment": "right"
+            },
+            "name_locales": {
+                "ja": "会員登録促進",
+                "en": "Membership signup promo"
+            }
+        }
+    ],
+    "bento_grid": [
+        {
+            "name": "サービス紹介",
+            "settings": {
+                "title": "私たちの強み",
+                "subtitle": "WHY CHOOSE US",
+                "item_1_title": "全国送料無料",
+                "item_1_text": "¥5,000以上のご注文で送料無料。",
+                "item_1_image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
+                "item_2_title": "30日間返品保証",
+                "item_2_text": "ご満足いただけない場合、全額返金。",
+                "item_3_title": "品質保証",
+                "item_4_title": "24時間サポート"
+            },
+            "name_locales": {
+                "ja": "サービス紹介",
+                "en": "Services showcase"
+            }
+        },
+        {
+            "name": "カテゴリ案内",
+            "settings": {
+                "title": "カテゴリから探す",
+                "subtitle": "BROWSE",
+                "item_1_title": "インテリア",
+                "item_1_text": "暮らしを彩る家具・雑貨。",
+                "item_1_image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
+                "item_2_title": "ファッション",
+                "item_2_text": "トレンドを押さえた最旬アイテム。",
+                "item_3_title": "ビューティー",
+                "item_4_title": "フード"
+            },
+            "name_locales": {
+                "ja": "カテゴリ案内",
+                "en": "Category guide"
+            }
+        }
+    ],
+    "banner_slider": [
+        {
+            "name": "TOPメインスライダー",
+            "settings": {
+                "slide1_image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
+                "slide1_link": "/new",
+                "slide1_alt": "新着",
+                "slide2_image": "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&q=80&w=2000",
+                "slide2_link": "/sale",
+                "slide2_alt": "セール",
+                "slide3_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
+                "slide3_link": "/collections",
+                "slide3_alt": "コレクション",
+                "interval": 5
+            },
+            "name_locales": {
+                "ja": "TOPメインスライダー",
+                "en": "Main hero slider"
+            }
+        }
+    ],
+    "image_block": [
+        {
+            "name": "フルワイドバナー",
+            "settings": {
+                "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
+                "alt_text": "バナー",
+                "caption": "",
+                "link_url": "/sale",
+                "width": "100%"
+            },
+            "name_locales": {
+                "ja": "フルワイドバナー",
+                "en": "Full-width banner"
+            }
+        },
+        {
+            "name": "ブランドイメージ（中央）",
+            "settings": {
+                "image_url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
+                "alt_text": "ブランド",
+                "caption": "洗練されたデザイン、揺るぎない品質",
+                "link_url": "",
+                "width": "800px"
+            },
+            "name_locales": {
+                "ja": "ブランドイメージ（中央）",
+                "en": "Brand image (centered)"
+            }
+        }
+    ],
+    "coupon_banner": [
+        {
+            "name": "新規会員クーポン",
+            "settings": {
+                "title": "新規会員限定",
+                "code": "WELCOME10",
+                "description": "会員登録で今すぐ使える10%OFFクーポン！",
+                "expires": ""
+            },
+            "name_locales": {
+                "ja": "新規会員クーポン",
+                "en": "New member coupon"
+            }
+        },
+        {
+            "name": "期間限定500円OFF",
+            "settings": {
+                "title": "期間限定クーポン",
+                "code": "SAVE500",
+                "description": "¥5,000以上のお買い上げで500円OFF",
+                "expires": "2026年5月31日まで"
+            },
+            "name_locales": {
+                "ja": "期間限定500円OFF",
+                "en": "Limited-time ¥500 off"
+            }
+        }
+    ],
+    "countdown_timer": [
+        {
+            "name": "セール終了カウントダウン",
+            "settings": {
+                "title": "タイムセール終了まで",
+                "end_date": "2026-12-31T23:59",
+                "message": "お見逃しなく！全品最大50%OFF",
+                "bg_color": "#dc2626"
+            },
+            "name_locales": {
+                "ja": "セール終了カウントダウン",
+                "en": "Sale end countdown"
+            }
+        }
+    ],
+    "button_cta": [
+        {
+            "name": "商品一覧へ（プライマリ）",
+            "settings": {
+                "label": "商品一覧を見る",
+                "url": "/products",
+                "style": "primary",
+                "size": "large",
+                "align": "center"
+            },
+            "name_locales": {
+                "ja": "商品一覧へ（プライマリ）",
+                "en": "To product list (primary)"
+            }
+        },
+        {
+            "name": "セール会場へ（赤）",
+            "settings": {
+                "label": "セール会場はこちら",
+                "url": "/sale",
+                "style": "danger",
+                "size": "large",
+                "align": "center"
+            },
+            "name_locales": {
+                "ja": "セール会場へ（赤）",
+                "en": "To sale page (red)"
+            }
+        },
+        {
+            "name": "会員登録（アウトライン）",
+            "settings": {
+                "label": "無料会員登録",
+                "url": "/register",
+                "style": "outline",
+                "size": "medium",
+                "align": "center"
+            },
+            "name_locales": {
+                "ja": "会員登録（アウトライン）",
+                "en": "Sign up (outline)"
+            }
+        }
+    ],
+    "product_display": [
+        {
+            "name": "新着商品グリッド（8件）",
+            "settings": {
+                "title": "新着アイテム",
+                "category_id": null,
+                "limit": 8,
+                "style": "grid"
+            },
+            "name_locales": {
+                "ja": "新着商品グリッド（8件）",
+                "en": "New arrivals grid (8 items)"
+            }
+        },
+        {
+            "name": "おすすめスクロール（10件）",
+            "settings": {
+                "title": "スタッフのおすすめ",
+                "category_id": null,
+                "limit": 10,
+                "style": "scroll"
+            },
+            "name_locales": {
+                "ja": "おすすめスクロール（10件）",
+                "en": "Staff picks scroll (10 items)"
+            }
+        }
+    ],
+    "sales_activity": [
+        {
+            "name": "販売状況（店舗全体）",
+            "settings": {
+                "scope": "store",
+                "category_id": null,
+                "product_id": null,
+                "hours": 24,
+                "title": "",
+                "style": "card"
+            },
+            "name_locales": {
+                "ja": "販売状況（店舗全体）",
+                "en": "Sales activity (store-wide)"
+            }
+        },
+        {
+            "name": "販売状況（カテゴリ内）",
+            "settings": {
+                "scope": "category",
+                "category_id": 1,
+                "product_id": null,
+                "hours": 24,
+                "title": "",
+                "style": "card"
+            },
+            "name_locales": {
+                "ja": "販売状況（カテゴリ内）",
+                "en": "Sales activity (category)"
+            }
+        },
+        {
+            "name": "販売状況（商品・商品ページ向け）",
+            "settings": {
+                "scope": "product",
+                "category_id": null,
+                "product_id": null,
+                "hours": 24,
+                "title": "",
+                "style": "card"
+            },
+            "name_locales": {
+                "ja": "販売状況（商品・商品ページ向け）",
+                "en": "Sales activity (product)"
+            }
+        }
+    ],
+    "spec_table": [
+        {
+            "name": "家電スペック",
+            "settings": {
+                "title": "製品仕様",
+                "r1_label": "サイズ",
+                "r1_value": "幅320×奥行180×高さ220mm",
+                "r2_label": "重量",
+                "r2_value": "約1.2kg",
+                "r3_label": "電源",
+                "r3_value": "AC100V 50/60Hz",
+                "r4_label": "消費電力",
+                "r4_value": "最大800W",
+                "r5_label": "カラー",
+                "r5_value": "ホワイト/ブラック/シルバー",
+                "r6_label": "保証",
+                "r6_value": "1年間"
+            },
+            "name_locales": {
+                "ja": "家電スペック",
+                "en": "Appliance specs"
+            }
+        },
+        {
+            "name": "アパレル詳細",
+            "settings": {
+                "title": "商品詳細",
+                "r1_label": "素材",
+                "r1_value": "綿100%（オーガニック）",
+                "r2_label": "サイズ展開",
+                "r2_value": "S/M/L/XL",
+                "r3_label": "原産国",
+                "r3_value": "日本",
+                "r4_label": "お手入れ",
+                "r4_value": "洗濯機洗い可",
+                "r5_label": "透け感",
+                "r5_value": "なし",
+                "r6_label": "モデル着用",
+                "r6_value": "Mサイズ（172cm）"
+            },
+            "name_locales": {
+                "ja": "アパレル詳細",
+                "en": "Apparel details"
+            }
+        },
+        {
+            "name": "食品表示",
+            "settings": {
+                "title": "商品情報",
+                "r1_label": "名称",
+                "r1_value": "オーガニックグラノーラ",
+                "r2_label": "内容量",
+                "r2_value": "250g",
+                "r3_label": "原材料",
+                "r3_value": "オーツ麦、メープルシロップ、アーモンド",
+                "r4_label": "賞味期限",
+                "r4_value": "製造日より6ヶ月",
+                "r5_label": "アレルギー",
+                "r5_value": "アーモンド",
+                "r6_label": "保存方法",
+                "r6_value": "直射日光を避け涼しい場所で保存"
+            },
+            "name_locales": {
+                "ja": "食品表示",
+                "en": "Food labeling"
+            }
+        },
+        {
+            "name": "家具スペック",
+            "settings": {
+                "title": "製品仕様",
+                "r1_label": "サイズ",
+                "r1_value": "幅1200 × 奥行600 × 高さ720 mm",
+                "r2_label": "素材",
+                "r2_value": "天板: オーク無垢材 / 脚: スチール（粉体塗装）",
+                "r3_label": "重量",
+                "r3_value": "約18 kg",
+                "r4_label": "耐荷重",
+                "r4_value": "天板 約50kg",
+                "r5_label": "組立",
+                "r5_value": "お客様組立（工具付属、約30分）",
+                "r6_label": "配送",
+                "r6_value": "大型便（玄関先渡し）"
+            },
+            "name_locales": {
+                "ja": "家具スペック",
+                "en": "Furniture specs"
+            }
+        },
+        {
+            "name": "コスメスペック",
+            "settings": {
+                "title": "製品情報",
+                "r1_label": "内容量",
+                "r1_value": "30mL",
+                "r2_label": "全成分",
+                "r2_value": "水、グリセリン、BG、ヒアルロン酸Na、セラミドNP、他",
+                "r3_label": "使用方法",
+                "r3_value": "洗顔後、適量を手に取り顔全体になじませてください",
+                "r4_label": "使用期限",
+                "r4_value": "開封後6ヶ月以内",
+                "r5_label": "原産国",
+                "r5_value": "日本",
+                "r6_label": "肌タイプ",
+                "r6_value": "全肌質対応（敏感肌テスト済み）"
+            },
+            "name_locales": {
+                "ja": "コスメスペック",
+                "en": "Cosmetics specs"
+            }
+        }
+    ],
+    "category_nav": [
+        {
+            "name": "カード型",
+            "settings": {
+                "title": "カテゴリから探す",
+                "style": "card"
+            },
+            "name_locales": {
+                "ja": "カード型",
+                "en": "Card layout"
+            }
+        },
+        {
+            "name": "リスト型",
+            "settings": {
+                "title": "カテゴリ",
+                "style": "list"
+            },
+            "name_locales": {
+                "ja": "リスト型",
+                "en": "List layout"
+            }
+        }
+    ],
+    "static_cms": [
+        {
+            "name": "フリーテキスト/HTML（標準）",
+            "settings": {
+                "content": "<h2>見出し</h2>\n<p>ここに本文やHTMLを入力してください。会社概要・規約・お知らせ・埋め込みマップなど、用途に合わせて複製・編集してお使いください。</p>"
+            },
+            "name_locales": {
+                "ja": "フリーテキスト/HTML（標準）",
+                "en": "Free text / HTML (default)"
+            }
+        }
+    ],
+    "feature_matrix": [
+        {
+            "name": "選ばれる理由4つ",
+            "settings": {
+                "title": "選ばれる理由",
+                "f1_title": "安心の品質保証",
+                "f1_desc": "全商品に品質保証をお付けしています。",
+                "f2_title": "最短翌日配送",
+                "f2_desc": "14時までのご注文で翌日お届け。",
+                "f3_title": "ポイント還元",
+                "f3_desc": "お買い物ごとにポイントが貯まります。",
+                "f4_title": "専門スタッフ対応",
+                "f4_desc": "商品知識豊富なスタッフが対応。"
+            },
+            "name_locales": {
+                "ja": "選ばれる理由4つ",
+                "en": "Four reasons to choose us"
+            }
+        },
+        {
+            "name": "ご利用の流れ",
+            "settings": {
+                "title": "ご利用の流れ",
+                "f1_title": "STEP 1: アカウント作成",
+                "f1_desc": "メールアドレスだけで簡単登録。",
+                "f2_title": "STEP 2: 商品を選ぶ",
+                "f2_desc": "お気に入りをカートに追加。",
+                "f3_title": "STEP 3: お支払い",
+                "f3_desc": "クレジットカード・コンビニ払い等に対応。",
+                "f4_title": "STEP 4: お届け",
+                "f4_desc": "丁寧に梱包してお届けします。"
+            },
+            "name_locales": {
+                "ja": "ご利用の流れ",
+                "en": "How it works"
+            }
+        }
+    ],
+    "faq_accordion": [
+        {
+            "name": "配送・送料FAQ",
+            "settings": {
+                "title": "配送について",
+                "q1": "送料はいくらですか？",
+                "a1": "全国一律550円（税込）。¥5,000以上で送料無料。",
+                "q2": "届くまでどれくらい？",
+                "a2": "通常2〜3営業日。14時までのご注文は翌日発送。",
+                "q3": "届け先の変更は？",
+                "a3": "発送前であればマイページから変更可能。"
+            },
+            "name_locales": {
+                "ja": "配送・送料FAQ",
+                "en": "Shipping FAQ"
+            }
+        },
+        {
+            "name": "返品・交換FAQ",
+            "settings": {
+                "title": "返品・交換について",
+                "q1": "返品はできますか？",
+                "a1": "商品到着後30日以内、未使用・タグ付きに限りお受けいたします。",
+                "q2": "サイズ交換は？",
+                "a2": "在庫がある場合、同一商品の別サイズに交換可能。送料当社負担。",
+                "q3": "不良品が届いた場合は？",
+                "a3": "すぐに交換品をお送りします。着払いにてご返送ください。"
+            },
+            "name_locales": {
+                "ja": "返品・交換FAQ",
+                "en": "Returns & exchanges FAQ"
+            }
+        },
+        {
+            "name": "会員・お支払い・特典FAQ",
+            "settings": {
+                "title": "会員・お支払い・特典",
+                "q1": "会員登録は必要ですか？",
+                "a1": "ゲスト購入も可能ですが、会員登録でポイント付与などの特典があります。",
+                "q2": "決済方法とクーポン・ポイントは？",
+                "a2": "カード・振込・コンビニ・電子マネーに対応。カートでクーポンコードを適用でき、ポイントと併用可能です。",
+                "q3": "領収書やパスワード再設定は？",
+                "a3": "領収書はマイページからPDF取得。パスワードはログイン画面からリセットできます。"
+            },
+            "name_locales": {
+                "ja": "会員・お支払い・特典FAQ",
+                "en": "Account, payment & perks FAQ"
+            }
+        }
+    ],
+    "video_block": [
+        {
+            "name": "YouTube埋め込み（標準）",
+            "settings": {
+                "title": "動画",
+                "video_url": "",
+                "youtube_id": "dQw4w9WgXcQ",
+                "poster_image": "",
+                "caption": "タイトル・キャプション・動画IDを編集してご利用ください。",
+                "autoplay": "no",
+                "loop": "no"
+            },
+            "name_locales": {
+                "ja": "YouTube埋め込み（標準）",
+                "en": "YouTube embed (default)"
+            }
+        },
+        {
+            "name": "背景ループ動画",
+            "settings": {
+                "title": "",
+                "video_url": "",
+                "youtube_id": "",
+                "poster_image": "",
+                "caption": "",
+                "autoplay": "yes",
+                "loop": "yes"
+            },
+            "name_locales": {
+                "ja": "背景ループ動画",
+                "en": "Background loop video"
+            }
+        },
+        {
+            "name": "ストーリー・インタビュー（YouTube）",
+            "settings": {
+                "title": "ブランドストーリー / お客様の声",
+                "video_url": "",
+                "youtube_id": "dQw4w9WgXcQ",
+                "poster_image": "",
+                "caption": "紹介・インタビュー・製造のこだわりなどに流用できます。",
+                "autoplay": "no",
+                "loop": "no"
+            },
+            "name_locales": {
+                "ja": "ストーリー・インタビュー（YouTube）",
+                "en": "Story / interview (YouTube)"
+            }
+        }
+    ],
+    "news_list": [
+        {
+            "name": "新着情報（5件）",
+            "settings": {
+                "title": "新着情報",
+                "limit": 5
+            },
+            "name_locales": {
+                "ja": "新着情報（5件）",
+                "en": "News (5 items)"
+            }
+        },
+        {
+            "name": "お知らせ一覧（件数変更用）",
+            "settings": {
+                "title": "お知らせ",
+                "limit": 10
+            },
+            "name_locales": {
+                "ja": "お知らせ一覧（件数変更用）",
+                "en": "Announcements (adjustable count)"
+            }
+        }
+    ],
+    "custom_css": [
+        {
+            "name": "セール用赤アクセント",
+            "settings": {
+                "css_code": ".sale-badge { background: #dc2626; color: #fff; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; }\n.sale-price { color: #dc2626; font-weight: 900; font-size: 1.5em; }"
+            },
+            "name_locales": {
+                "ja": "セール用赤アクセント",
+                "en": "Sale red accent CSS"
+            }
+        },
+        {
+            "name": "ダークセクション背景",
+            "settings": {
+                "css_code": ".dark-section { background: #0f172a; color: #f8fafc; padding: 80px 40px; }\n.dark-section h2 { color: #818cf8; }"
+            },
+            "name_locales": {
+                "ja": "ダークセクション背景",
+                "en": "Dark section background"
+            }
+        }
+    ],
+    "spacer": [
+        {
+            "name": "余白（中 80px）",
+            "settings": {
+                "height": 80,
+                "show_line": "no"
+            },
+            "name_locales": {
+                "ja": "余白（中 80px）",
+                "en": "Spacer (medium 80px)"
+            }
+        },
+        {
+            "name": "余白（大 120px）",
+            "settings": {
+                "height": 120,
+                "show_line": "no"
+            },
+            "name_locales": {
+                "ja": "余白（大 120px）",
+                "en": "Spacer (large 120px)"
+            }
+        },
+        {
+            "name": "区切り線付き",
+            "settings": {
+                "height": 60,
+                "show_line": "yes"
+            },
+            "name_locales": {
+                "ja": "区切り線付き",
+                "en": "Spacer with divider"
+            }
+        }
+    ],
+    "testimonial_slider": [
+        {
+            "name": "お客様の声（標準）",
+            "settings": {
+                "title": "お客様の声",
+                "t1_name": "田中 美咲",
+                "t1_quote": "品質の高さに驚きました。写真以上に実物が素敵で、毎日愛用しています。"
+            },
+            "name_locales": {
+                "ja": "お客様の声（標準）",
+                "en": "Testimonials (default)"
+            }
+        },
+        {
+            "name": "リピーター・ギフト（流用用）",
+            "settings": {
+                "title": "ご利用の感想",
+                "t1_name": "ご利用者様",
+                "t1_quote": "リピート購入やギフト利用など、文言を編集してお使いください。"
+            },
+            "name_locales": {
+                "ja": "リピーター・ギフト（流用用）",
+                "en": "Repeat buyers & gifts (template)"
+            }
+        }
+    ],
+    "logo_cloud": [
+        {
+            "name": "ロゴ一覧（取扱・メディアなど）",
+            "settings": {
+                "title": "取扱ブランド"
+            },
+            "name_locales": {
+                "ja": "ロゴ一覧（取扱・メディアなど）",
+                "en": "Logo row (brands & press)"
+            }
+        }
+    ],
+    "newsletter_signup": [
+        {
+            "name": "メール登録（標準）",
+            "settings": {
+                "title": "最新情報・セールをお届け",
+                "placeholder": "メールアドレスを入力"
+            },
+            "name_locales": {
+                "ja": "メール登録（標準）",
+                "en": "Newsletter signup (default)"
+            }
+        }
+    ]
+}

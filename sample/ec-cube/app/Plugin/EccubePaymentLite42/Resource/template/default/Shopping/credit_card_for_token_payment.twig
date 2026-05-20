@@ -1,0 +1,178 @@
+
+{% extends 'default_frame.twig' %}
+
+{% form_theme form 'Form/form_div_layout.twig' %}
+
+{% block main %}
+    <div class="ec-registerRole">
+        <div class="ec-pageHeader">
+            <h1>{{ 'gmo_epsilon.front.shopping.credit_card_for_token_payment'|trans }}</h1>
+        </div>
+        <div class="ec-off1Grid">
+            <div class="ec-off1Grid__cell">
+                <form method="post"
+                      action="{{ url('eccube_payment_lite42_credit_card_for_token_payment') }}"
+                      id="createTokenForm"
+                      novalidate>
+                    <input type='hidden' value='' name='token' id="token" />
+                    {{ form_widget(form._token) }}
+                    {{ form_widget(form.token) }}
+                    {{ form_widget(form.contract_code) }}
+                    {{ form_errors(form.contract_code) }}
+                    {{ form_errors(form.token) }}
+                </form>
+                <form method="post" id="formSubmit" action="javascript:void(0);">
+                    <div class="ec-borderedDefs">
+                        <dl>
+                            <dt>
+                                {{ form_label(form.credit_card_number, 'gmo_epsilon.common.credit_card_number', { 'label_attr': { 'class': 'ec-label' }}) }}
+                            </dt>
+                            <dd>
+                                <div class="ec-halfInput{{ has_errors(form.credit_card_number) ? ' error' }}">
+                                    {{ form_widget(form.credit_card_number) }}
+                                    {{ form_errors(form.credit_card_number) }}
+                                </div>
+                                <div id="credit_card_number_description" class="credit-card-number-description"></div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                {{ form_label(form.credit_card_number, 'gmo_epsilon.common.expiration_date', { 'label_attr': { 'class': 'ec-label' }}) }}
+                            </dt>
+                            <dd>
+                                <div class="ec-select{{ has_errors(form.expiration_month) ? ' error' }}">
+                                    {{ form_widget(form.expiration_month) }}
+                                    {{ form_errors(form.expiration_month) }}
+                                </div>
+                                <div class="ec-select{{ has_errors(form.expiration_year) ? ' error' }}">
+                                    {{ form_widget(form.expiration_year) }}
+                                    {{ form_errors(form.expiration_year) }}
+                                </div>
+                                <div id="expiration_description" class="expiration-description"></div>
+                            </dd>
+                        </dl>
+                        <dl id="security_code_item" class="security-code-item">
+                            <dt>
+                                {{ form_label(form.security_code, 'gmo_epsilon.common.security_code', { 'label_attr': { 'class': 'ec-label' }}) }}
+                            </dt>
+                            <dd>
+                                <div class="ec-halfInput{{ has_errors(form.security_code) ? ' error' }}">
+                                    {{ form_widget(form.security_code) }}
+                                    {{ form_errors(form.security_code) }}
+                                </div>
+                                <div id="security_code_description" class="security-code-description"></div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                {{ form_label(form.credit_card_number, 'gmo_epsilon.common.holder_name', { 'label_attr': { 'class': 'ec-label' }}) }}
+                            </dt>
+                            <dd>
+                                <div class="ec-halfInput{{ has_errors(form.holder_name) ? ' error' }}">
+                                    {{ form_widget(form.holder_name) }}
+                                    {{ form_errors(form.holder_name) }}
+                                </div>
+                                <div id="holder_name_description" class="holder-name-description"></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ec-registerRole__actions">
+                        <div class="ec-off4Grid">
+                            <div class="ec-off4Grid__cell">
+                                <button
+                                    id="formSubmit"
+                                    type="submit"
+                                    class="ec-blockBtn--action"
+                                >
+                                    購入する
+                                </button>
+                                <a href="{{ url('shopping') }}" class="ec-blockBtn--cancel">{{ 'common.back'|trans }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                {% if token is defined %}
+                    <form id='checkoutForm' action='{{ url('shopping_checkout') }}' method='post'>
+                        {# 取得したトークンを設定するプレースホルダ #}
+                        <input type='hidden' value='{{ token }}' name='token' id="token" />
+                        {{ form_widget(checkoutForm._token) }}
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+<script src='{{ url_token_js }}'></script>
+<script>
+    {# トークンを送信 #}
+    const gmo_token_error_messages = {
+        "100" : "カード番号に数字以外の文字が含まれています",
+        "101" : "カード番号の桁数が正しくありません",
+        "110" : "有効期限が入力されていません",
+        "111" : "有効期限に数値以外の文字が含まれています",
+        "112" : "有効期限は6又は4ケタで指定してください",
+        "113" : "有効期限は有効な年月を指定してください",
+        "121" : "セキュリティコードに数字以外の文字が含まれています",
+        "122" : "セキュリティコードは4桁以内で指定してください",
+        "131" : "名義人に無効な文字が含まれています",
+        "132" : "名義人は50桁以内で指定してください",
+    };
+
+    const gmo_token_error_element = {
+        "100" : "credit_card_number",
+        "101" : "credit_card_number",
+        "110" : "expiration_month",
+        "111" : "expiration_month",
+        "112" : "expiration_month",
+        "113" : "expiration_month",
+        "121" : "security_code",
+        "122" : "security_code",
+        "131" : "holder_name",
+        "132" : "holder_name",
+    };
+
+    function getErrorMessage(error_code) {
+        if (typeof gmo_token_error_messages[error_code] == null) {
+            return  + "決済エラーです。";
+        } else {
+            return gmo_token_error_messages[error_code];
+        }
+    }
+
+    function execTrade(response) {
+        if (response.resultCode != '000') {
+            document.getElementById('credit_card_for_token_payment_token').value = '';
+            alert(getErrorMessage(response.resultCode)); // エラーの場合
+            document.getElementById("credit_card_for_token_payment_" + gmo_token_error_element[response.resultCode]).focus();
+            loadingOverlay('hide');
+            return;
+        } else {
+            {# フォームに値を設定 #}
+            document.getElementById('credit_card_for_token_payment_token').value = response.tokenObject.token;
+            document.getElementById('createTokenForm').submit();
+        }
+    }
+    $(function() {
+        {# トークン発行 #}
+        $('#formSubmit').on('submit', function(e) {
+            e.preventDefault();
+            var cardObj = {};
+            var year = document.getElementById('credit_card_for_token_payment_expiration_year').value;
+            var month = ('00' + document.getElementById('credit_card_for_token_payment_expiration_month').value).slice(-2)
+            cardObj.cardno = document.getElementById('credit_card_for_token_payment_credit_card_number').value;
+            cardObj.expire = year + month;
+            cardObj.securitycode = document.getElementById('credit_card_for_token_payment_security_code').value;
+            cardObj.holdername = document.getElementById('credit_card_for_token_payment_holder_name').value;
+            EpsilonToken.init(document.getElementById("credit_card_for_token_payment_contract_code").value);
+            EpsilonToken.getToken(cardObj, execTrade);
+        });
+
+        {% if token is defined %}
+            loadingOverlay();
+            document.getElementById('token').value = '{{ token }}';
+            document.getElementById('checkoutForm').submit()
+        {% endif %}
+    });
+</script>
+{% endblock javascript %}

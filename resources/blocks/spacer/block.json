@@ -1,0 +1,10 @@
+{
+    "name": "スペーサー",
+    "category": "General",
+    "schema": {
+        "height": "integer",
+        "show_line": "string"
+    },
+    "icon": "minus",
+    "version": "1.0.0"
+}

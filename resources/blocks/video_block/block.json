@@ -1,0 +1,15 @@
+{
+    "name": "動画",
+    "category": "General",
+    "schema": {
+        "title": "string",
+        "video_url": "string",
+        "youtube_id": "string",
+        "poster_image": "image",
+        "caption": "text",
+        "autoplay": "string",
+        "loop": "string"
+    },
+    "icon": "video-camera",
+    "version": "1.0.0"
+}

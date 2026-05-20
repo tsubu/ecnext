@@ -1,0 +1,14 @@
+{
+    "name": "ヒーローバナー",
+    "category": "Marketing",
+    "schema": {
+        "headline": "text",
+        "lead_text": "text",
+        "bg_image": "image",
+        "cta_primary_label": "string",
+        "cta_primary_link": "string",
+        "overlay_opacity": "number"
+    },
+    "icon": "sparkles",
+    "version": "1.0.0"
+}

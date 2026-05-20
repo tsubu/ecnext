@@ -1,0 +1,16 @@
+{
+    "name": "販売状況",
+    "default_title_store": "最近の販売状況（店舗全体）",
+    "default_title_category": "このカテゴリの販売状況",
+    "default_title_product": "この商品の販売状況",
+    "default_title": "販売状況",
+    "badge_product_html": "過去%1$s時間で %2$s 点が購入されました",
+    "badge_orders_html": "過去%1$s時間で %2$s 点の注文がありました",
+    "ticker_store_bought_html": "%1$s · %2$sが購入されました",
+    "ticker_product_only": "%1$s — この商品が購入されました",
+    "card_subtitle": "過去%1$s時間の販売点数（注文明細合計）",
+    "unit_piece": "点",
+    "card_line_quantity": "%1$s · %2$s 点",
+    "recent_products_heading": "最近売れた商品",
+    "recent_products_more": "%1$s など"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "顧客の声",
+    "category": "Trust",
+    "schema": {
+        "title": "string",
+        "t1_name": "string",
+        "t1_quote": "text"
+    },
+    "icon": "chat-alt",
+    "version": "1.0.0"
+}

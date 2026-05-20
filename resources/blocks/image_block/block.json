@@ -1,0 +1,13 @@
+{
+    "name": "画像",
+    "category": "Marketing",
+    "schema": {
+        "image_url": "image",
+        "alt_text": "string",
+        "caption": "string",
+        "link_url": "string",
+        "width": "string"
+    },
+    "icon": "photograph",
+    "version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "販売状況",
+    "category": "Commerce",
+    "schema": {
+        "scope": "string",
+        "category_id": "integer",
+        "product_id": "integer",
+        "hours": "integer",
+        "title": "string",
+        "style": "string"
+    },
+    "icon": "fire",
+    "version": "1.0.0"
+}

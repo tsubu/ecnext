@@ -1,0 +1,8 @@
+{
+    "name": "カウントダウン",
+    "default_title": "カウントダウン",
+    "unit_days": "日",
+    "unit_hours": "時間",
+    "unit_minutes": "分",
+    "unit_seconds": "秒"
+}

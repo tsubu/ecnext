@@ -1,0 +1,13 @@
+{
+    "name": "CTAボタン",
+    "category": "Marketing",
+    "schema": {
+        "label": "string",
+        "url": "string",
+        "style": "string",
+        "size": "string",
+        "align": "string"
+    },
+    "icon": "cursor-click",
+    "version": "1.0.0"
+}

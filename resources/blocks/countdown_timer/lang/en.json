@@ -1,0 +1,8 @@
+{
+    "name": "Countdown timer",
+    "default_title": "Countdown",
+    "unit_days": "Days",
+    "unit_hours": "Hours",
+    "unit_minutes": "Mins",
+    "unit_seconds": "Secs"
+}

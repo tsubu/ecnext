@@ -1,0 +1,12 @@
+{
+    "name": "商品表示",
+    "category": "Commerce",
+    "schema": {
+        "title": "string",
+        "category_id": "integer",
+        "limit": "integer",
+        "style": "string"
+    },
+    "icon": "grid",
+    "version": "1.0.0"
+}

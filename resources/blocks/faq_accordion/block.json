@@ -1,0 +1,15 @@
+{
+    "name": "FAQアコーディオン",
+    "category": "General",
+    "schema": {
+        "title": "string",
+        "q1": "string",
+        "a1": "text",
+        "q2": "string",
+        "a2": "text",
+        "q3": "string",
+        "a3": "text"
+    },
+    "icon": "question-mark-circle",
+    "version": "1.0.0"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "カウントダウン",
+    "category": "Marketing",
+    "schema": {
+        "title": "string",
+        "end_date": "string",
+        "message": "text",
+        "bg_color": "string"
+    },
+    "icon": "clock",
+    "version": "1.0.0"
+}

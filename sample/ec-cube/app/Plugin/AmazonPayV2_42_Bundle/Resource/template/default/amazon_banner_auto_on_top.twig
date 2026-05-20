@@ -1,0 +1,20 @@
+{#
+Amazon Pay V2 for EC-CUBE4
+Copyright(c) 2023 EC-CUBE CO.,LTD. all rights reserved.
+
+https://www.ec-cube.co.jp/
+
+This program is not free software.
+It applies to terms of service.
+#}
+    <link rel="stylesheet" href="{{ asset('assets/css/amazon_shopping_v2.css') }}">
+    <script>
+        $(function () {
+            // ボタンを設置
+            $("div.ec-layoutRole__mainBottom").append($("#AmazonBanner"));
+        });
+    </script>
+    
+    <div style="display: none">
+        <div id="AmazonBanner"></div>
+    </div>

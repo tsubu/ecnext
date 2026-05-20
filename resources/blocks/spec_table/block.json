@@ -1,0 +1,21 @@
+{
+    "name": "スペック表",
+    "category": "Commerce",
+    "schema": {
+        "title": "string",
+        "r1_label": "string",
+        "r1_value": "string",
+        "r2_label": "string",
+        "r2_value": "string",
+        "r3_label": "string",
+        "r3_value": "string",
+        "r4_label": "string",
+        "r4_value": "string",
+        "r5_label": "string",
+        "r5_value": "string",
+        "r6_label": "string",
+        "r6_value": "string"
+    },
+    "icon": "table",
+    "version": "1.0.0"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "フィーチャーマトリクス",
+    "category": "General",
+    "schema": {
+        "title": "string",
+        "f1_title": "string",
+        "f1_desc": "text",
+        "f2_title": "string",
+        "f2_desc": "text",
+        "f3_title": "string",
+        "f3_desc": "text",
+        "f4_title": "string",
+        "f4_desc": "text"
+    },
+    "icon": "check-circle",
+    "version": "1.0.0"
+}

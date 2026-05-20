@@ -1,0 +1,10 @@
+{
+    "name": "カテゴリナビ",
+    "category": "Commerce",
+    "schema": {
+        "title": "string",
+        "style": "string"
+    },
+    "icon": "dots-circle-horizontal",
+    "version": "1.0.0"
+}

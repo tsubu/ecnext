@@ -1,0 +1,15 @@
+{
+    "name": "ロゴクラウド",
+    "category": "Trust",
+    "schema": {
+        "title": "string",
+        "logo1": "image",
+        "logo2": "image",
+        "logo3": "image",
+        "logo4": "image",
+        "logo5": "image",
+        "logo6": "image"
+    },
+    "icon": "shield-check",
+    "version": "1.0.0"
+}

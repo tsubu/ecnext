@@ -1,0 +1,18 @@
+{
+    "name": "バナースライダー",
+    "category": "Marketing",
+    "schema": {
+        "slide1_image": "image",
+        "slide1_link": "string",
+        "slide1_alt": "string",
+        "slide2_image": "image",
+        "slide2_link": "string",
+        "slide2_alt": "string",
+        "slide3_image": "image",
+        "slide3_link": "string",
+        "slide3_alt": "string",
+        "interval": "integer"
+    },
+    "icon": "switch-horizontal",
+    "version": "1.0.0"
+}

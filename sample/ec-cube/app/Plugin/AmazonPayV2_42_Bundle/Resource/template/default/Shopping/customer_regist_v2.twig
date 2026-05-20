@@ -1,0 +1,113 @@
+{#
+Amazon Pay V2 for EC-CUBE4.2
+Copyright(c) 2023 EC-CUBE CO.,LTD. all rights reserved.
+
+https://www.ec-cube.co.jp/
+
+This program is not free software.
+It applies to terms of service.
+#}
+{% block javascript %}
+<script>
+var amazon_submit_flag = false;
+
+$(function () {
+    $('.ec-orderRole__summary').append($('.amazon_customer_regist_v2'));
+
+    $('input[name="_shopping_order[login_check_v2]"]:radio').on("change", function () {
+        set_required($(this));
+    });
+});
+function set_required(e){
+    if (e.val() === 'regist') {
+        $("#shopping_order_customer_regist_v2").attr('required','required');
+        $("#shopping_order_amazon_login_email_v2").removeAttr('required');
+        $("#shopping_order_amazon_login_password_v2").removeAttr('required');
+    } else if (e.val() === 'login') {
+        $('#shopping_order_customer_regist_v2').removeAttr('required');
+        $("#shopping_order_amazon_login_email_v2").attr('required','required');
+        $("#shopping_order_amazon_login_password_v2").attr('required','required');
+    }
+}
+</script>
+{% endblock %}
+
+<div class="d-none">
+    <div class="amazon_customer_regist_v2">
+    {% if not is_granted('ROLE_USER') %}
+        {% if AmazonPayV2Config.login_required == eccube_config.amazon_pay_v2.toggle.on %}
+            <dl>
+                <dd>
+                    <div >
+                        {{ form_widget(form.login_check_v2[0]) }}
+                    </div>
+                </dd>
+            </dl>
+        {% endif %}
+        <dl>
+            <dd>
+                <div class="ec-halfInput{{ has_errors(form.customer_regist_v2) ? ' error'}}">
+                    {{ form_errors(form.customer_regist_v2) }}
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dd>
+                <label>
+                    {{ form_widget(form.customer_regist_v2) }}
+                    {{ 'amazon_pay_v2.front.shopping.customer_regist_v2'|trans }}
+                </label>
+                ※ {{ 'front.entry.agree_with_terms'|trans({ '%url%': url('help_agreement') })|raw }}
+            </dd>
+        </dl>
+        {% if useMailMagazine %}
+            <dl>
+                <dd>
+                    <div class="ec-halfInput{{ has_errors(form.mail_magazine) ? ' error'}}">
+                        {{ form_errors(form.mail_magazine) }}
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <label>
+                        {{ form_widget(form.mail_magazine) }}
+                        {{ 'amazon_pay_v2.front.shopping.mail_magazine'|trans }}
+                    </label>
+                </dd>
+            </dl>
+        {% endif %}
+        {% if AmazonPayV2Config.login_required == eccube_config.amazon_pay_v2.toggle.on %}
+            <dl>
+                <dd>
+                    <div>
+                        {{ form_widget(form.login_check_v2[1]) }}
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <div class="col ec-halfInput{{ has_errors(form.amazon_login_email_v2) ? ' error'}}">
+                    {{ form_errors(form.amazon_login_email_v2) }}
+                </div>
+                <dd>メールアドレス</dd>
+            </dl>
+            <dl>
+                <div {% if form.amazon_login_email_v2.vars.errors is not empty %}class="has-error"{% endif %}>
+                    {{ form_widget(form.amazon_login_email_v2) }}
+                </div>
+            </dl>
+            <dl>
+                <div class="col ec-halfInput{{ has_errors(form.amazon_login_password_v2) ? ' error'}}">
+                    {{ form_errors(form.amazon_login_password_v2) }}
+                </div>
+                <dd>パスワード</dd>
+            </dl>
+            <dl>
+                <div {% if form.amazon_login_password_v2.vars.errors is not empty %}class="has-error"{% endif %}>
+                    {{ form_widget(form.amazon_login_password_v2) }}
+                </div>
+            </dl>
+        {% endif %}
+    {% endif %}
+    </div>
+</div>

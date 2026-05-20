@@ -1,0 +1,67 @@
+{#
+Amazon Pay V2 for EC-CUBE4.2
+Copyright(c) 2023 EC-CUBE CO.,LTD. all rights reserved.
+
+https://www.ec-cube.co.jp/
+
+This program is not free software.
+It applies to terms of service.
+#}
+
+<script src="{{ AmazonPayV2Api.checkout_script_url }}"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        // エラー文を設置
+        $(".ec-pageHeader").after($(".login_with_amazon_error"));
+
+        {% if AmazonPayV2Config.mypage_login_button_place == constant('Plugin\\AmazonPayV2_42_Bundle\\Form\\Type\\Master\\ConfigTypeMaster::CART_BUTTON_PLACE')['AUTO'] %}
+        $("div.ec-login > .div_AmazonLogin").each(function() {
+            AmazonRenderButton();
+        });
+        {% else %}
+        AmazonRenderButton();
+        {% endif %}
+
+    });
+
+    function AmazonRenderButton() {
+        amazon.Pay.renderButton('#AmazonLoginButton', {
+            // set checkout environment
+            merchantId: '{{ AmazonPayV2Config.seller_id }}',
+            ledgerCurrency: 'JPY',
+            {% if AmazonPayV2Config.env == eccube_config.amazon_pay_v2.env.sandbox %}
+            sandbox: true,
+            {% endif %}
+            // customize the buyer experience
+            checkoutLanguage: 'ja_JP',
+            productType: 'SignIn',
+            placement: 'Other',
+            buttonColor: '{{ buttonColor }}',
+            // configure sign in
+            signInConfig: {
+                payloadJSON: '{{ payload | raw }}', // string generated in step 2
+                signature: '{{ signature }}', // signature generatd in step 3
+                publicKeyId: '{{ AmazonPayV2Config.public_key_id }}'
+            }
+        });
+    }
+</script>
+
+<div class="hidden">
+    <div class="ec-role login_with_amazon_error">
+        <div class="ec-grid3 ec-grid--center">
+            <div class="ec-off3Grid__cell">
+                {% for error in app.session.flashbag.get('eccube.amazon_pay_v2.error') %}
+                    <div class="ec-alert-warning">
+                        <div class="ec-alert-warning__icon">
+                            <img src="{{ asset('assets/icon/exclamation-white.svg') }}">
+                        </div>
+                        <div class="ec-alert-warning__text">
+                            {{ error|trans|nl2br }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

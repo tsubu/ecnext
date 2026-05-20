@@ -1,0 +1,10 @@
+{
+    "name": "お知らせ一覧",
+    "category": "General",
+    "schema": {
+        "title": "string",
+        "limit": "integer"
+    },
+    "icon": "bell",
+    "version": "1.0.0"
+}

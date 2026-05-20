@@ -1,0 +1,47 @@
+{#
+Amazon Pay V2 for EC-CUBE4.2
+Copyright(c) 2023 EC-CUBE CO.,LTD. all rights reserved.
+
+https://www.ec-cube.co.jp/
+
+This program is not free software.
+It applies to terms of service.
+#}
+<script src="{{ AmazonPayV2Api.checkout_script_url }}"></script>
+
+{% for CartIndex,Cart in Carts %}
+    {% set cartKey = Cart.cart_key %}
+    {% set SaleType = Cart.CartItems[0].ProductClass.SaleType.id %}
+    {% if SaleType in AmazonSaleTypes %}
+    <script>
+    // ボタンを設置
+    $('#form_cart > div.ec-cartRole__actions').eq("{{ loop.index0 }}").after($("#AmazonPayJS{{ cartKey }}"));
+
+    $(function () {
+        amazon.Pay.renderButton('#AmazonPayButton{{ cartKey }}', {
+            // set checkout environment
+            merchantId: '{{ AmazonPayV2Config.seller_id }}',
+            ledgerCurrency: 'JPY',
+            {% if AmazonPayV2Config.env == eccube_config.amazon_pay_v2.env.sandbox %}
+            sandbox: true,
+            {% endif %}
+            // customize the buyer experience
+            checkoutLanguage: 'ja_JP',
+            productType: 'PayAndShip',
+            placement: 'Cart',
+            buttonColor: '{{ AmazonPayV2Config.cart_button_color }}',
+            // configure Create Checkout Session request
+            createCheckoutSessionConfig: {
+                payloadJSON: '{{ cart[cartKey].payload | raw }}', // string generated in step 2
+                signature: '{{ cart[cartKey].signature }}', // signature generated in step 3
+                publicKeyId: '{{ AmazonPayV2Config.public_key_id }}'
+            }
+        });
+    });
+    </script>
+    {% else %}
+        <script>
+            $("#AmazonPayButton{{ cartKey }}").remove();
+        </script>
+    {% endif %}
+{% endfor %}

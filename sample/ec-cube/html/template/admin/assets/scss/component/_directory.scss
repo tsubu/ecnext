@@ -1,0 +1,174 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+@mixin directoryTree{
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 5px;
+    margin-bottom: 0;
+    > a, span {
+      flex: 1;
+      word-break: break-all;
+    }
+  }
+  ul {
+    width: 100%;
+  }
+  > ul {
+    ul {
+      margin-left: 10px;
+    }
+  }
+  //2層目以降
+  ul >li > ul {
+    li > label {
+      padding-left: 20px;
+      position: relative;
+      &:before {
+        display: block;
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        left: 0;
+      }
+    }
+    li:not(:last-of-type) > label::before {
+      content: "├";
+    }
+    li:last-of-type > label::before  {
+      content: "└";
+    }
+  }
+}
+
+
+@mixin directoryLabelIcon{
+  //1層目
+  label {
+    &::before {
+      content: "\f146";
+      display: inline-block;
+      margin-right: .5em;
+      font-family: 'Font Awesome 5 Free';
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &.collapsed {
+      &::before {
+        content: "\f0fe";
+      }
+    }
+  }
+
+  //2層目以降
+  ul >li > ul {
+    label {
+      &::after {
+        content: "\f146";
+        display: inline-block;
+        margin-right: .5em;
+        font-family: 'Font Awesome 5 Free';
+        font-size: 16px;
+        font-weight: 400;
+      }
+      &.collapsed {
+        &::after {
+          content: "\f0fe";
+        }
+      }
+    }
+  }
+}
+/*
+ディレクトリツリー
+
+ディレクトリ構造をツリー形式で表示します。
+
+Markup:
+include /assets/tmpl/components/directory.pug
++c-directoryTree
+
+Styleguide 7.0
+*/
+.c-directoryTree {
+  @include directoryTree();
+  @include directoryLabelIcon();
+}
+
+
+/*
+ディレクトリツリー（カテゴリ登録）
+
+カテゴリ登録ページに使用されるディレクトリツリーのコンポーネントです。
+
+sg-wrapper:
+  <script>
+    directoryTreeRegister();
+  </script>
+<sg-wrapper-content/>
+
+Markup:
+include /assets/tmpl/components/directory.pug
++c-directoryTreeRegister
+
+Styleguide 7.1
+*/
+.c-directoryTree--register {
+  @include directoryTree();
+  max-height: 300px;
+  overflow: scroll;
+  input {
+    display: block;
+    margin-right: 10px;
+    margin-top: 0.2em;
+  }
+  label {
+    flex: 1;
+    word-break: break-all;
+  }
+}
+
+/*
+ディレクトリツリー（フォルダー）
+
+ファイル管理ページに使用されるディレクトリツリーのコンポーネントです。
+フォルダ名、もしくはフォルダアイコンをクリックすることで下層の要素を表示することが出来ます。
+
+Markup:
+include /assets/tmpl/components/directory.pug
++c-directoryTreeFolder
+
+Styleguide 7.2
+*/
+
+.c-directoryTree--folder {
+  @include directoryTree();
+  @include directoryLabelIcon();
+  //1層目
+  label {
+    &::before {
+      content: "\f07c";
+    }
+    &.collapsed {
+      &::before {
+        content: "\f07b";
+      }
+    }
+  }
+
+  //2層目以降
+  ul >li > ul {
+    label {
+      &::after {
+        content: "\f07c";
+      }
+      &.collapsed {
+        &::after {
+          content: "\f07b";
+        }
+      }
+    }
+  }
+}

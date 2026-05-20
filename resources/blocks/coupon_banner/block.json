@@ -1,0 +1,12 @@
+{
+    "name": "クーポンバナー",
+    "category": "Marketing",
+    "schema": {
+        "title": "string",
+        "code": "string",
+        "description": "text",
+        "expires": "string"
+    },
+    "icon": "ticket",
+    "version": "1.0.0"
+}
