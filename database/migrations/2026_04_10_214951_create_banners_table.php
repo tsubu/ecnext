@@ -20,16 +20,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('notices', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('content');
-            $table->timestamp('published_at')->nullable();
-            $table->boolean('is_published')->default(true);
-            $table->string('category')->nullable();
-            $table->timestamps();
-        });
-
         Schema::create('coupons', function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
@@ -96,7 +86,6 @@ return new class extends Migration
         Schema::dropIfExists('mail_templates');
         Schema::dropIfExists('favorites');
         Schema::dropIfExists('coupons');
-        Schema::dropIfExists('notices');
         Schema::dropIfExists('banners');
     }
 };

@@ -15,7 +15,7 @@ class BlockLibrarySeeder extends Seeder
     use BuildsSharedBlockInstanceFromPreset;
 
     /**
-     * Reset block tables, register types from resources/blocks/*/block.json, then seed shared library
+     * Reset block tables, register types from resources/blocks (block.json), then seed shared library
      * instances from resources/blocks/_shared_library.json (optional demo content).
      *
      * Types are not defined here — only folder manifests + blocks:sync / BlockPluginSyncService.
